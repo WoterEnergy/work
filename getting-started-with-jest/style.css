@@ -1,0 +1,9 @@
+.modal {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    padding: 10px 5px;
+    background-color: rgba(212, 78, 16, 0.822);
+    width: 640px;
+}
