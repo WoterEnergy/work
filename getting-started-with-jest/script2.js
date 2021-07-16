@@ -77,15 +77,41 @@ CriateCirkle.prototype.update = function () {
       this.y += this.velY;
 }
 
-
-let testBall = new CriateCirkle(20, 10, 10, 10);
-
-
-button.onclick = () => {
+button.onclick = function makeCirkle ()  {
     testBall.x
     testBall.size
     testBall.color
     testBall.draw()
-
+    loop();
 }
+
+const balls = []
+
+function loop () {
+    ctx.fillStyle =  'rgba(0, 0, 0, 0.25)';
+    ctx.fillRect(0, 0, width, height)
+
+    // while (balls.length <= 27) {
+    //     let ball = new CriateCirkle (
+    //         CriateCirkle(0, width),
+    //         CriateCirkle(0, height),
+    //         CriateCirkle(-7, 7),
+    //         CriateCirkle(-7, 7),
+    //         'rgb(' + CriateCirkle(0,255) + ',' + CriateCirkle(0,255) + ',' + CriateCirkle(0,255) +')',
+    //         CriateCirkle(10, 20)
+    //     );
+    //     balls.push(ball);
+        
+    // }
+for (let i = 0; i < balls.length; i++) {
+    balls[i].draw()
+    balls[i].update()
+}
+requestAnimationFrame(loop);
+}
+
+
+let testBall = new CriateCirkle(20, 10, 10, 10);
+
+
 
