@@ -42,10 +42,10 @@ const height = canvas.height = window.innerHeight;
 function CriateCirkle(velX, velY, x, y,) {
     // this.size = size;
     // this.color = color;
-    this.x = x;
-    this.y = y;
-    this.velX = velX;
-    this.velY = velY;
+    this.x = 100;
+    this.y = 100;
+    this.velX = Math.floor(Math.random()* 4);
+    this.velY = Math.floor(Math.random()* -4);
 
 }
 CriateCirkle.prototype.draw = function () {
@@ -55,6 +55,7 @@ CriateCirkle.prototype.draw = function () {
     ctx.fill()
     
 }
+
 
 CriateCirkle.prototype.update = function () {
     if ((this.x + size) >= width) {
@@ -78,37 +79,38 @@ CriateCirkle.prototype.update = function () {
 }
 
 button.onclick = function makeCirkle ()  {
-    testBall.x
+    testBall.speed
     testBall.size
     testBall.color
     testBall.draw()
     loop();
 }
 
-const balls = []
+let balls = []
+
 
 function loop () {
-    ctx.fillStyle =  'rgba(0, 0, 0, 0.25)';
+    ctx.fillStyle =  'rgba(0, 0, 0, 0.0)';
     ctx.fillRect(0, 0, width, height)
 
-    // while (balls.length <= 27) {
-    //     let ball = new CriateCirkle (
-    //         CriateCirkle(0, width),
-    //         CriateCirkle(0, height),
-    //         CriateCirkle(-7, 7),
-    //         CriateCirkle(-7, 7),
-    //         'rgb(' + CriateCirkle(0,255) + ',' + CriateCirkle(0,255) + ',' + CriateCirkle(0,255) +')',
-    //         CriateCirkle(10, 20)
-    //     );
-    //     balls.push(ball);
+    while (balls.length <= 27) {
+        let ball = CriateCirkle (
+            new CriateCirkle(0, width),
+            new CriateCirkle(0, height),
+            new CriateCirkle(-7, 7),
+            new CriateCirkle(-7, 7),
+            'rgb(' + CriateCirkle(0,255) + ',' + CriateCirkle(0,255) + ',' + CriateCirkle(0,255) +')',
+            CriateCirkle(10, 20)
+        );
+        balls.push(ball);
         
-    // }
+    }
+
 for (let i = 0; i < balls.length; i++) {
-    balls[i].draw()
-    balls[i].update()
 }
 requestAnimationFrame(loop);
 }
+
 
 
 let testBall = new CriateCirkle(20, 10, 10, 10);

@@ -1,0 +1,28 @@
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    padding: 0px 20px 0px 20px;
+}
+
+ul {
+    display: flex;
+}
+
+.film-cart {
+    margin: 35px 5px;
+    background-color: aqua;
+    border-radius: 9px;
+}
