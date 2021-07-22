@@ -9,6 +9,7 @@ h3 {
 }
 
 h2 {
+   
     display: flex;
     justify-content: center;
 }
@@ -17,12 +18,8 @@ p {
     padding: 0px 20px 0px 20px;
 }
 
-ul {
-    display: flex;
-}
-
 .film-cart {
     margin: 35px 5px;
-    background-color: aqua;
+    background-color: rgb(212, 102, 12);
     border-radius: 9px;
 }
