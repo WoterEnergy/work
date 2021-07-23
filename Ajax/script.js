@@ -88,8 +88,8 @@ function fetchFilms(url) {
 function displayData(data) {
   let output = '';
   data.results.forEach(item => {
-      output += `<div>Film ID: ${item["episode_id"]}</div><h3>${item.title}</h3>
-                  <p><strong>Short description:</strong> ${item["opening_crawl"]}</p><h3>Characters:</h3><ul class="chars"></ul>`
+      output += `<div class='film-cart'><div class="Flm-id">Film ID: ${item["episode_id"]}</div><h3>${item.title}</h3>
+                  <p>Short description:  ${item["opening_crawl"]}</p><h3>Characters:</h3><ul class="chars"></ul></div>`
 
   })
   document.body.innerHTML = output;
@@ -97,7 +97,7 @@ function displayData(data) {
 
 function displayCharacters(loadChars) {
   return function (charList, filmId) {
-      loadChars[filmId].innerHTML = `<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>`;
+    //   loadChars[filmId].innerHTML = `<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>`;
       const fetchChars = charList.map(charURL => {
           return fetch(charURL).then((res) => {
               return res.json();
@@ -116,6 +116,13 @@ function displayCharacters(loadChars) {
 }
 
 fetchFilms('https://swapi.dev/api/films/');
+
+
+
+
+
+
+
 
 // showMe('https://ajax.test-danit.com/api/swapi/films')
 
