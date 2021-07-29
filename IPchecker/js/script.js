@@ -8,9 +8,13 @@ btn.addEventListener('click', async function (event) {
     })
     .then((data) => {
         let IpInfo = data
-         JSON.stringify(data)
-        text.append( print(IpInfo) )
+        let ipCheck = JSON.stringify(data)
+        //  text.append(ipCheck)
+        text.append( print(IpInfo))
+        // alert(ipCheck)
       return console.log(IpInfo);
+    
+      
     });
     
 })
@@ -20,11 +24,22 @@ const print = function(o){
 
     for(const p in o){
         if(typeof o[p] == 'string'){
-            str+= p + ': ' + o[p]+' ';
-        }else{
-            str+= p + ': {' + print(o[p]) + '}'
+            str+= "YOUR IP ADDRESS : " + o[p];
         }
+        // else{
+        //     str+= p + ': {' + print(o[p]) + '}'
+        // }
     }
 
     return str;
+}
+
+
+function dispData (data) {
+const output = data.forEach(element => {
+    str =''
+    str += `<div> IP is : ${ip} </div>`
+});
+
+document.body.innerHTML = str
 }
