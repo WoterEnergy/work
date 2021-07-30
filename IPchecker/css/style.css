@@ -37,7 +37,5 @@ flex-direction: column;
     display: flex;
     justify-content: center;
     color:white;
-    
+    text-transform: uppercase;
   }
-
-  /* 1.2em */
