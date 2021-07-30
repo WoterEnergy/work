@@ -16,8 +16,6 @@ class GetIp {
     async render () {
         const {btn, text} = this.elements
         const {country, regionName, city, zip, timezone, query} = await this.data
-     
-        const empty = ''
         const info = (`You info : Country - ${country},  region name - ${regionName}, city - ${city}, zip - ${zip}, time - ${timezone}, you ip ${query}`);
         btn.addEventListener('click', () => {
             text.innerHTML = ""
