@@ -40,23 +40,15 @@ export default class Header extends Component {
         }else {
             container.append(loginBtn)
         }
-
+    loginBtn.addEventListener('click', () => {
+        document.querySelector('#visitFormModal').classList.add('active')
+    })
+    createVizit.addEventListener('click', () => {
+        document.querySelector('#visitFormModal').classList.add('active')
+    })
+    super.render()
 
     }
 }
 
-
-
-// loginBtn.addEventListener('click', () => {
-//     document.querySelector('#loginFormModal').classList.add('active');
-// });
-
-// createVisitBtn.addEventListener('click', () => {
-//     document.querySelector('#visitFormModal').classList.add('active');
-// });
-
-// super.render();
-// }
-// }
-
-// new Header(headerClasses).render();
+new Header(headerClasses).render()
