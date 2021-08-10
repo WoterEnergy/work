@@ -3,12 +3,19 @@ import React from 'react';
 
 class App extends React.Component {
   render () {
+    let className = 'menu';
+    if (this.props.isActive) {
+      className += ' menu-active';
+    }
   return (
     <>
+    <span className={className}></span>
     <div className="App">
+      <div className='log-form'>
 <input className='Login' placeholder='Write you Email'></input>
-<input className='pswrd' placeholder='Write Password'></input>
-<button onClick={this.handleClick} className='Btn'>Login</button>
+<input className='password' placeholder='Write Password'></input>
+<button onClick={this.handleClick} className='button'><span>Login</span></button>
+</div>
     </div>
 <div></div>
   </>

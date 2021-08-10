@@ -3,8 +3,26 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  /* flex-direction: column;
-  width: 300px; */
+  flex-direction: column;
+}
+
+.log-form {
+  width: 210px;
+}
+
+/* .menu {
+background-color: aqua;
+padding: 30px 15px 30px 15px;
+
+} */
+
+.Login {
+  height: 20px;
+}
+
+.password {
+  height: 20px;
+  margin: 25px 0 25px 0;
 }
 
 .App-logo {
@@ -13,7 +31,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .menu {
     animation: App-logo-spin infinite 20s linear;
   }
 }
@@ -33,11 +51,52 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes menu {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+background-color: aqua;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 38px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
