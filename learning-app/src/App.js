@@ -12,10 +12,10 @@ class App extends React.Component {
     <span className={className}></span>
     <div className="App">
       <div className='log-form'>
-<h2>Email:</h2><input className='Login' placeholder='Write you Email'></input>
-<h2>Password:</h2><input className='password' placeholder='Write Password'></input>
+<h2>Email:</h2><input type="email" name="email"  className='Login' placeholder='Write you Email'></input>
+<h2>Password:</h2><input type="password" name="password"  className='password' placeholder='Write Password'></input>
 
-<button onClick={this.handleClick} className='button'><span>Login</span></button>
+<button type="submit" onClick={this.handleClick} className='button'><span>Login</span></button>
 </div>
     </div>
 <div></div>
