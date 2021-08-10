@@ -1,13 +1,14 @@
 .App {
-  padding: 300px;
+  margin-top: 100px;
   text-align: center;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
 .log-form {
   width: 210px;
+ 
 }
 
 /* .menu {
@@ -17,12 +18,15 @@ padding: 30px 15px 30px 15px;
 } */
 
 .Login {
-  height: 20px;
+  height: 40px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .password {
-  height: 20px;
-  margin: 25px 0 25px 0;
+  height: 40px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .App-logo {
