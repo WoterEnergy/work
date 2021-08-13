@@ -1,0 +1,162 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.navbar { background:#440930;}
+.nav-link , .navbar-brand{ color: #f4f4f4; cursor: pointer;}
+.nav-link{ margin-right: 1em !important;}
+.nav-link:hover{ background: #f4f4f4; color: #440930; border-radius: 9px;}
+.navbar-collapse{ justify-content: flex-end;}
+.navbar-toggler{  background:#fff !important;}
+.navbar-collapse{
+    justify-content: flex-end;
+}
+
+
+
+@keyframes spinner-border {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #0869d9;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 38px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.App {
+    margin-top: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    width: 210px;
+}
+
+.hidden {
+    position: absolute;
+    display: none;
+}
+
+.text {
+    text-align: center;
+    margin: 50px 25px;
+}
+
+.text-sub {
+    margin: 20px;
+}
+
+
+.burger{
+    position: absolute;
+    position: fixed;
+    /* right: 10px; */
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  .burger span, .burger span:before, .burger span:after{
+    width: 100%;
+    position: absolute;
+    height: 10px;
+    background: #333;
+    display: block;
+    transition: .3s;
+    border-radius: 5px;
+  }
+  .burger span:before{
+    content: "";
+    top: -20px;
+    transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .burger span{
+    top: 20px;
+  }
+  .burger span:after{
+    content: "";
+    bottom: -20px;
+    transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .burger span.active:before{
+    content: "";
+    top: 0px;
+    transform: rotate(45deg);
+    transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .burger span.active:after{
+    content: "";
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .burger span.active{
+    background: rgba(255, 255, 255, 0); 
+  }
+
+  .menu{
+    width: 300px;
+    height: auto;
+    background: #333;
+    color: #ccc;
+    padding: 10px;
+    position: fixed;
+    left: -320px;
+    transition: left 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    margin-top: 50px;
+  }
+  .menu.animate{
+    left: 0;
+  }
+
+
+
+
